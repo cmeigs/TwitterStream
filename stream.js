@@ -14,10 +14,11 @@ server.listen(80, function() {
 
 // require socket IO
 var socketio = require('socket.io');
-//socketio.configure(function() {
-//	socket.set('transports', ['websocket']);
-//});
 var io = socketio.listen(server);
+io.configure(function() {
+	io.set('transports', ['websocket']);
+	io.set('log level', 5);
+});
 
 // require twitter
 var twitter = require('ntwitter'); 
