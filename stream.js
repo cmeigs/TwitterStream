@@ -7,8 +7,8 @@ console.log("Express Running");
 var http = require('http');
 var server = http.createServer(app);
 console.log("Server Created");
-//server.listen(3000, function() {
-server.listen(80, function() {
+server.listen(3000, function() {
+//server.listen(80, function() {
     console.log('Streaming on port %d', server.address().port);
 });
 
