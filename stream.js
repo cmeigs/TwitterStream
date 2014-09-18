@@ -1,10 +1,12 @@
 // require express
 var express = require('express');
 var app = express();
+console.log("Express Running");
 
 // require http (so we will have a server) 
 var http = require('http');
 var server = http.createServer(app);
+console.log("Server Created");
 //server.listen(3000, function() {
 server.listen(80, function() {
     console.log('Streaming on port %d', server.address().port);
