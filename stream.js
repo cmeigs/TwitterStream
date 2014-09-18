@@ -17,7 +17,6 @@ var socketio = require('socket.io');
 var io = socketio.listen(server);
 io.configure(function() {
 	io.set('transports', ['websocket']);
-	io.set('log level', 5);
 });
 
 // require twitter

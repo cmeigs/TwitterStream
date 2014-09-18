@@ -5,8 +5,11 @@
         <script src="//cdn.socket.io/socket.io-1.1.0.js"></script>
         <script>
             console.log("Stream Started");
+            $('#messages').append('<li>Stream Started</li>');
+            
             //var socket = io.connect('//localhost:3000');
             var socket = io.connect('ws://twitterstream.azurewebsites.net/');
+            console.log(socket);
 
             socket.on('welcome', function(data) {
                 $('#messages').append('<li>' + data.message + '</li>');
