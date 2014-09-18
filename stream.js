@@ -15,9 +15,9 @@ server.listen(80, function() {
 // require socket IO
 var socketio = require('socket.io');
 var io = socketio.listen(server);
-io.configure(function() {
-	io.set('transports', ['websocket']);
-});
+//io.configure(function() {
+//	io.set('transports', ['websocket']);
+//});
 
 // require twitter
 var twitter = require('ntwitter'); 
